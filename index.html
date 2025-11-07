@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Početna</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
     <!-- Slick -->
     <link
       rel="stylesheet"
@@ -24,10 +25,14 @@
     />
     <!-- Css -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- header & bootstrap nav -->
-    <header class="container header">
+    <header class="header">
+      <div class="container">
+
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html"
@@ -48,32 +53,38 @@
           >
             <ul class="navbar-nav">
               <li>
-                <a href="#">arhitektura</a>
+                <a href="projects.html">arhitektura</a>
               </li>
               <li>
-                <a href="#">enterijeri</a>
+                <a href="projects.html">enterijeri</a>
               </li>
               <li>
-                <a href="#">tržni centri</a>
+                <a href="projects.html">tržni centri</a>
               </li>
               <li>
-                <a href="#">o nama</a>
+                <a href="about.html">o nama</a>
               </li>
               <li>
-                <a href="#">klijenti</a>
+                <a href="clients.html">klijenti</a>
               </li>
               <li>
-                <a href="#">kontakt</a>
+                <a href="contact.html">kontakt</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+      
+      </div>
     </header>
 
     <!-- Slider -->
-    <section>
-      <div class="container slide-wrapper">
+    <section class="slider">
+      <div
+        class="container slide-wrapper"
+        data-aos="zoom-in"
+        data-aos-duration="500"
+      >
         <div class="home-slider">
           <div><img src="/assets/images/slide1.png" alt="slide1" /></div>
           <div><img src="/assets/images/slide1.png" alt="slide1" /></div>
@@ -94,12 +105,16 @@
     <section>
       <div class="container">
         <h3 class="home-subtitle"><span>izdvojeni</span> projekti</h3>
-        <div class="row home-projects">
-          <div class="col-12 col-sm-6 col-lg-4">
+        <div class="row home-projects g-4">
+          <div
+            class="col-12 col-sm-6 col-lg-4"
+            data-aos="fade-right"
+            data-aos-duration="700"
+          >
             <div class="project-card">
               <img src="assets/images/project1.png" alt="project 1" />
               <div class="project-link">
-                <p><span>//</span> Autobuska stanica</p>
+                <p>// Autobuska stanica</p>
                 <a href="#"
                   ><img
                     src="assets/images/top-right-arrow.svg"
@@ -110,11 +125,15 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-lg-4">
+          <div
+            class="col-12 col-sm-6 col-lg-4"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
             <div class="project-card">
               <img src="assets/images/project2.png" alt="project 2" />
               <div class="project-link">
-                <p><span>//</span> autobuska stanica</p>
+                <p>// autobuska stanica</p>
                 <a href="#"
                   ><img
                     src="assets/images/top-right-arrow.svg"
@@ -125,11 +144,15 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-lg-4">
+          <div
+            class="col-12 col-sm-6 col-lg-4"
+            data-aos="fade-left"
+            data-aos-duration="700"
+          >
             <div class="project-card">
               <img src="assets/images/project3.png" alt="project 3" />
               <div class="project-link">
-                <p><span>//</span> autobuska stanica</p>
+                <p>// autobuska stanica</p>
                 <a href="#"
                   ><img
                     src="assets/images/top-right-arrow.svg"
@@ -186,5 +209,7 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!--My script -->
     <script src="./assets/scripts/script.js"></script>
+    <!-- AOS script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>
