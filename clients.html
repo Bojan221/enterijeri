@@ -12,6 +12,8 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Css -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
@@ -39,7 +41,7 @@
             >
               <ul class="navbar-nav">
                 <li>
-                  <a href="projects.html">arhitektura</a>
+                  <a href="projects.html" class="active">arhitektura</a>
                 </li>
                 <li>
                   <a href="projects.html">enterijeri</a>
@@ -66,8 +68,8 @@
     <!-- clients -->
     <section>
       <div class="container clients">
-        <h1 class="about-title clients-title">naši <span>klijenti</span></h1>
-        <div class="clients-wrapper row g-4">
+        <h1 class="about-title clients-title" data-aos="fade-down" data-aos-duration="700">naši <span>klijenti</span></h1>
+        <div class="clients-wrapper row g-4" data-aos="zoom-in" data-aos-duration="700">
           <div class="col-4 col-sm-3">
             <img src="assets/images/klijent1.png" alt="klijent" />
           </div>
@@ -184,6 +186,8 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <!-- AOS script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!--My script -->
     <script src="./assets/scripts/script.js"></script>
   </body>

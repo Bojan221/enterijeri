@@ -12,6 +12,8 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Css -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
@@ -38,8 +40,8 @@
             id="navbarNav"
           >
             <ul class="navbar-nav">
-              <li>
-                <a href="projects.html">arhitektura</a>
+              <li >
+                <a href="projects.html" class="active">arhitektura</a>
               </li>
               <li>
                 <a href="projects.html">enterijeri</a>
@@ -67,8 +69,8 @@
     <section>
       <div class="container">
         <div class="about-info">
-          <h1 class="about-title">kontaktirajte <span>nas</span></h1>
-          <div class="info-wrapper">
+          <h1 class="about-title" data-aos="fade-right" data-aos-duration="600">kontaktirajte <span>nas</span></h1>
+          <div class="info-wrapper" data-aos="fade-left" data-aos-duration="600">
             <p>
               Projekat.ba nastao je 2015. godine kao arhitektonski dio firme doo
               „Vamark“ koja je nastala 1990. godine.
@@ -94,8 +96,8 @@
               investitore sa arhitekturom.
             </p>
           </div>
-          <div class="btn-wrapper">
-            <button>kontaktirajte nas</button>
+          <div class="btn-wrapper" data-aos="fade-right" data-aos-duration="600">
+            <button >kontaktirajte nas</button>
           </div>
         </div>
       </div>
@@ -105,9 +107,9 @@
     <section>
       <div class="container">
         <div class="team-section">
-          <h2 class="about-title">naš <span>tim</span></h2>
+          <h2 class="about-title" data-aos="fade-left" data-aos-duration="600">naš <span>tim</span></h2>
           <div class="team-wrapper">
-            <div class="team-card">
+            <div class="team-card" data-aos="fade-right" data-duration="600">
               <img src="/assets/images/person1.png" alt="arhitekta" />
               <div>
                 <p>// Marko Vukićević</p>
@@ -115,7 +117,7 @@
                 <p>projekat@projekat.ba</p>
               </div>
             </div>
-            <div class="team-card">
+            <div class="team-card" data-aos="fade-down" data-aos-duration="600">
               <img src="/assets/images/person2.png" alt="arhitekta" />
               <div>
                 <p>// Marko Vukićević</p>
@@ -123,7 +125,7 @@
                 <p>projekat@projekat.ba</p>
               </div>
             </div>
-            <div class="team-card">
+            <div class="team-card" data-aos="fade-left" data-aos-duration="600">
               <img src="/assets/images/person3.png" alt="arhitekta" />
               <div>
                 <p>// Marko Vukićević</p>
@@ -131,7 +133,7 @@
                 <p>projekat@projekat.ba</p>
               </div>
             </div>
-            <div class="team-card">
+            <div class="team-card" data-aos="fade-up" data-aos-duration="600">
               <img src="/assets/images/person4.png" alt="arhitekta" />
               <div>
                 <p>// Marko Vukićević</p>
@@ -179,6 +181,8 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+        <!-- AOS script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!--My script -->
     <script src="./assets/scripts/script.js"></script>
   </body>
