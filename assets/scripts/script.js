@@ -45,3 +45,38 @@ window.addEventListener("load", function () {
     });
   }
 });
+
+// Single project page slider
+if (document.querySelector(".project-slider")) {
+  $(document).ready(function () {
+    const $slider = $(".project-slider");
+
+    $slider.slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      speed: 500,
+      arrows: true,
+      autoplay: false,
+      centerMode: true,
+      centerPadding: "25%",
+      prevArrow: $(".prevBtn"),
+      nextArrow: $(".nextBtn"),
+    });
+
+    $slider.on(
+      "beforeChange",
+      function (event, slick, currentSlide, nextSlide) {
+        if (currentSlide !== nextSlide) {
+          document
+            .querySelectorAll(".slick-center + .slick-cloned")
+            .forEach((next) => {
+              setTimeout(() =>
+                next.classList.add("slick-current", "slick-center")
+              );
+            });
+        }
+      }
+    );
+  });
+}

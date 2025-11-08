@@ -11,8 +11,6 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Slick -->
     <link
       rel="stylesheet"
@@ -24,6 +22,8 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Css -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
@@ -50,7 +50,7 @@
               id="navbarNav"
             >
               <ul class="navbar-nav">
-                <li >
+                <li>
                   <a href="projects.html" class="active">arhitektura</a>
                 </li>
                 <li>
@@ -75,14 +75,52 @@
       </div>
     </header>
 
-    <!-- Slider -->
-     <section>
-       <div class="product-slider">
-        <div><img src="/assets/images/product-slide3.jpg" alt="project"></div>
-        <div><img src="/assets/images/product-slide2.jpg" alt="project"></div>
-        <div><img src="/assets/images/product-slide1.jpg" alt="project"></div>
-       </div>
-     </section>
+    <section>
+      <div class="container-custom" data-aos="zoom-in" data-aos-duration="600">
+        <div class="project-slider">
+          <div><img src="assets/images/product-slide1.jpg" alt="slide" /></div>
+          <div><img src="assets/images/product-slide1.jpg" alt="slide" /></div>
+          <div><img src="assets/images/product-slide1.jpg" alt="slide" /></div>
+          <div><img src="assets/images/product-slide1.jpg" alt="slide" /></div>
+          <div><img src="assets/images/product-slide1.jpg" alt="slide" /></div>
+        </div>
+        <div class="prevBtn">
+          <img src="assets/images/Arrow_Left.svg" alt="prev" />
+        </div>
+        <div class="nextBtn">
+          <img src="assets/images/Arrow_Right.svg" alt="next" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container" data-aos="fade-up" data-aos-duration="800">
+        <div class="about-project">
+          <h4>O projektu</h4>
+          <div class="project-info">
+            <div>
+              <p>Klijent</p>
+              <p>DOO Finalprom</p>
+            </div>
+            <hr />
+            <div>
+              <p>Godina Dizajna</p>
+              <p>2002</p>
+            </div>
+            <hr />
+            <div>
+              <p>Dimenzije</p>
+              <p>2700 M2</p>
+            </div>
+            <hr />
+            <div>
+              <p>Lokacija</p>
+              <p>Bijeljina</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -119,12 +157,12 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <!-- AOS script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Slick script -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- AOS script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!--My script -->
     <script src="./assets/scripts/script.js"></script>
   </body>
