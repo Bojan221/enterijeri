@@ -12,31 +12,93 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <!-- Slick -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
-     <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <!-- Css -->
-    <link rel="stylesheet" href="./assets/styles/style.css" />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <style>
+        /* header & bootstrap nav */
+.header {
+  padding-top: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: white;
+  transition: all 0.4s ease-in-out;
+}
+.header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation: slideDown 0.6s ease forwards;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar-nav {
+  gap: 70px;
+}
+.navbar-nav li a {
+  text-decoration: none;
+  color: var(--primary-gray);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+}
+.navbar-nav li a.active {
+  color: var(--dark);
+  font-weight: 600;
+}
+
+/* footer */
+.footer {
+  padding: 36px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--primary-gray);
+  font-size: 13px;
+  letter-spacing: 2%;
+  line-height: 16px;
+}
+.socials {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 18px;
+}
+.socials > a > img {
+  width: 27px;
+  height: 27px;
+}
+.footer p {
+  text-transform: uppercase;
+}
+.contact-info {
+  margin-bottom: 20px;
+}
+.address-info {
+  margin-bottom: 44px;
+}
+.all-rights {
+  margin-bottom: 33px;
+}
+.all-rights a {
+  color: var(--primary-gray);
+}
+.custom-grid {
+  display: grid;
+  gap: 65px;
+  margin-top: 97px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ScrollOut animacija za kartice */
+[data-scroll] {
+  will-change: transform, opacity;
+  transition: all 0.5s ease-out;
+opacity: calc(0.3 + (var(--visible-y) * 0.7));
+  transform: scale(calc(0.5 + calc(var(--visible-y) * 0.5)));
+}
+
+    </style>
   </head>
   <body>
     <!-- header & bootstrap nav -->
@@ -62,7 +124,7 @@
             >
               <ul class="navbar-nav">
                 <li>
-                  <a href="projects.html" class="active">arhitektura</a>
+                  <a href="projects.html"  class="active">arhitektura</a>
                 </li>
                 <li>
                   <a href="projects.html">enterijeri</a>
@@ -85,17 +147,13 @@
         </nav>
       </div>
     </header>
-
+    
     <!-- Projects -->
     <main>
       <div class="container">
         <div class="custom-grid" data-aos="zoom-in" data-aos-duration="600">
           <div class="project-card card-animate" data-scroll>
-            <img
-              src="assets/images/project1.png"
-              alt="project 1"
-              onclick="openModal()"
-            />
+            <img src="assets/images/project1.png" alt="project 1" onclick="openSlider(event)"/>
             <div class="project-link">
               <p>// Autobuska stanica</p>
               <a href="singleProduct.html">
@@ -110,7 +168,7 @@
           </div>
 
           <div class="project-card card-animate" data-scroll>
-            <img src="assets/images/project2.png" alt="project 2" onclick="openModal()"/>
+            <img src="assets/images/project2.png" alt="project 2" />
             <div class="project-link">
               <p>// Autobuska stanica</p>
               <a href="singleProduct.html">
@@ -125,7 +183,7 @@
           </div>
 
           <div class="project-card card-animate" data-scroll>
-            <img src="assets/images/project3.png" alt="project 3" onclick="openModal()"/>
+            <img src="assets/images/project3.png" alt="project 3" />
             <div class="project-link">
               <p>// Autobuska stanica</p>
               <a href="singleProduct.html">
@@ -140,7 +198,7 @@
           </div>
 
           <div class="project-card card-animate" data-scroll>
-            <img src="assets/images/project4.png" alt="project 4" onclick="openModal()"/>
+            <img src="assets/images/project4.png" alt="project 4" />
             <div class="project-link">
               <p>// Autobuska stanica</p>
               <a href="singleProduct.html">
@@ -155,7 +213,7 @@
           </div>
 
           <div class="project-card card-animate" data-scroll>
-            <img src="assets/images/project5.png" alt="project 5" onclick="openModal()"/>
+            <img src="assets/images/project5.png" alt="project 5" />
             <div class="project-link">
               <p>// Autobuska stanica</p>
               <a href="singleProduct.html">
@@ -170,7 +228,7 @@
           </div>
 
           <div class="project-card card-animate" data-scroll>
-            <img src="assets/images/project5.png" alt="project 5" onclick="openModal()"/>
+            <img src="assets/images/project5.png" alt="project 5" />
             <div class="project-link">
               <p>// Autobuska stanica</p>
               <a href="singleProduct.html">
@@ -185,7 +243,7 @@
           </div>
 
           <div class="project-card card-animate" data-scroll>
-            <img src="assets/images/project5.png" alt="project 5" onclick="openModal()"/>
+            <img src="assets/images/project5.png" alt="project 5" />
             <div class="project-link">
               <p>// Autobuska stanica</p>
               <a href="singleProduct.html">
@@ -200,7 +258,7 @@
           </div>
 
           <div class="project-card card-animate" data-scroll>
-            <img src="assets/images/project5.png" alt="project 5" onclick="openModal()"/>
+            <img src="assets/images/project5.png" alt="project 5" />
             <div class="project-link">
               <p>// Autobuska stanica</p>
               <a href="singleProduct.html">
@@ -215,7 +273,7 @@
           </div>
 
           <div class="project-card card-animate" data-scroll>
-            <img src="assets/images/project5.png" alt="project 5" onclick="openModal()"/>
+            <img src="assets/images/project5.png" alt="project 5" />
             <div class="project-link">
               <p>// Autobuska stanica</p>
               <a href="singleProduct.html">
@@ -230,7 +288,7 @@
           </div>
 
           <div class="project-card card-animate" data-scroll>
-            <img src="assets/images/project5.png" alt="project 5" onclick="openModal()"/>
+            <img src="assets/images/project5.png" alt="project 5" />
             <div class="project-link">
               <p>// Autobuska stanica</p>
               <a href="singleProduct.html">
@@ -245,7 +303,7 @@
           </div>
 
           <div class="project-card card-animate" data-scroll>
-            <img src="assets/images/project5.png" alt="project 5" onclick="openModal()"/>
+            <img src="assets/images/project5.png" alt="project 5" />
             <div class="project-link">
               <p>// Autobuska stanica</p>
               <a href="singleProduct.html">
@@ -260,7 +318,7 @@
           </div>
 
           <div class="project-card card-animate" data-scroll>
-            <img src="assets/images/project6.png" alt="project 6" onclick="openModal()"/>
+            <img src="assets/images/project6.png" alt="project 6" />
             <div class="project-link">
               <p>// Autobuska stanica</p>
               <a href="singleProduct.html">
@@ -276,40 +334,6 @@
         </div>
       </div>
     </main>
-
-    <!-- Modal -->
-    <section class="modal-wrapper" data-aos="zoom-in" data-aos-duration="600">
-      <i class="fa-solid fa-xmark close" onclick="closeModal()"></i>
-      <div class="modal-slider" >
-        <div><img src="assets/images/project2.png" alt="project1" /></div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione id
-            nemo tempora ducimus nostrum fugiat laboriosam asperiores incidunt a
-            eos ipsum quis reprehenderit alias debitis officia enim quibusdam,
-            architecto dolores?
-          </p>
-        </div>
-        <div><img src="assets/images/project4.png" alt="project4" /></div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quos,
-            laboriosam, exercitationem numquam enim asperiores quia nesciunt sed
-            eaque quis obcaecati beatae laborum neque. Ea deserunt reiciendis
-            quas exercitationem in fugiat excepturi tempore placeat dignissimos!
-          </p>
-        </div>
-        <div><img src="assets/images/project6.png" alt="project6" /></div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum quos,
-            laboriosam, exercitationem numquam enim asperiores quia nesciunt sed
-            eaque quis obcaecati beatae laborum neque. Ea deserunt reiciendis
-            quas exercitationem in fugiat excepturi tempore placeat dignissimos!
-          </p>
-        </div>
-      </div>
-    </section>
 
     <!-- Footer -->
     <footer>
@@ -346,17 +370,16 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    <!-- AOS script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-     <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Slick script -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- ScrollOut.js -->
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-    <!--My script -->
-    <script src="./assets/scripts/script.js"></script>
+    <script>
+  ScrollOut({
+    threshold: 0.5,
+    cssProps: {
+      visibleY: true
+    }
+  });
+</script>
+
   </body>
 </html>

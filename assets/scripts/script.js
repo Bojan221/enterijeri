@@ -30,6 +30,31 @@ if (document.querySelector(".card-animate")) {
   });
 }
 
+// Modal slider 
+if(document.querySelector(".modal-slider")){
+  $('.modal-slider').slick({
+  dots: true,
+  arrows:true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  centerMode: true,
+  variableWidth: true,
+  adaptiveHeight: true,
+});
+}
+
+//  var swiper = new Swiper(".modal-slider", {
+//       slidesPerView: 3,
+//       spaceBetween: 30,
+//       freeMode: true,
+//       pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true,
+//       },
+//     });
+
+
 // AOS
 window.addEventListener("load", function () {
   AOS.init({
@@ -62,6 +87,19 @@ if (document.querySelector(".project-slider")) {
       centerPadding: "25%",
       prevArrow: $(".prevBtn"),
       nextArrow: $(".nextBtn"),
+        responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
+        centerMode: true,
+        centerPadding: '10%',
+        prevArrow:'',
+        nextArrow:'',
+      }
+    }
+  ]
+
     });
 
     $slider.on(
@@ -79,4 +117,18 @@ if (document.querySelector(".project-slider")) {
       }
     );
   });
+}
+
+// Modal
+function openModal () {
+  const modalOpen = document.querySelector(".modal-wrapper");
+  modalOpen.classList.add('show')
+    setTimeout(() => {
+    $('.modal-slider').slick('setPosition');
+  }, 100);
+}
+
+function closeModal () {
+  let modalClose = document.querySelector(".modal-wrapper");
+  modalClose.classList.remove('show')
 }
