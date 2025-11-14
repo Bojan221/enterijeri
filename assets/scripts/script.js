@@ -32,28 +32,34 @@ if (document.querySelector(".card-animate")) {
 
 // Modal slider 
 if(document.querySelector(".modal-slider")){
-  $('.modal-slider').slick({
-  dots: true,
-  arrows:true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  centerMode: true,
-  variableWidth: true,
-  adaptiveHeight: true,
+
+
+var swiper = new Swiper(".modal-slider", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  freeMode: true,
+  grabCursor: true, 
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+        0: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  }
 });
+
 }
-
-//  var swiper = new Swiper(".modal-slider", {
-//       slidesPerView: 3,
-//       spaceBetween: 30,
-//       freeMode: true,
-//       pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//       },
-//     });
-
 
 // AOS
 window.addEventListener("load", function () {
@@ -122,10 +128,7 @@ if (document.querySelector(".project-slider")) {
 // Modal
 function openModal () {
   const modalOpen = document.querySelector(".modal-wrapper");
-  modalOpen.classList.add('show')
-    setTimeout(() => {
-    $('.modal-slider').slick('setPosition');
-  }, 100);
+  modalOpen.classList.add('show');
 }
 
 function closeModal () {
