@@ -1,7 +1,9 @@
-// Stiky header animation
+// Sticky header
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".header");
-  if (window.scrollY > 200) {
+  if (!header) return;
+
+  if (window.scrollY > 150) {
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
@@ -18,6 +20,11 @@ if (document.querySelector(".home-slider")) {
       autoplaySpeed: 5000,
       prevArrow: $(".prev"),
       nextArrow: $(".next"),
+      breakpoints: {
+        576: {
+          prevArrow: false,
+        }
+      }
     });
   });
 }
@@ -126,7 +133,8 @@ if (document.querySelector(".project-slider")) {
 }
 
 // Modal
-function openModal () {
+if(document.querySelector('.modal-wrapper')){
+  function openModal () {
   const modalOpen = document.querySelector(".modal-wrapper");
   modalOpen.classList.add('show');
 }
@@ -134,4 +142,5 @@ function openModal () {
 function closeModal () {
   let modalClose = document.querySelector(".modal-wrapper");
   modalClose.classList.remove('show')
+}
 }
