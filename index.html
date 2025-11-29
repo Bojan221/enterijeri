@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Početna</title>
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png" />
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
     <!-- Slick -->
     <link
       rel="stylesheet"
@@ -28,7 +28,15 @@
     <!-- Css -->
     <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
-  <body>
+  <body class="splash-active">
+    <!-- Splash Screen (fragmented logo assemble animation) -->
+    <div class="splash-screen" id="splashScreen">
+      <div class="splash-content">
+        <!-- JS will generate small fragments of the SVG logo inside this container -->
+        <div id="fragmentsContainer" class="fragments-container" aria-hidden="true"></div>
+      </div>
+    </div>
+
     <!-- header & bootstrap nav -->
     <header class=" header">
       <div class="container">
@@ -76,6 +84,8 @@
       </div>
     </header>
 
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
     <!-- Slider -->
     <section class="slider">
       <div
@@ -113,7 +123,7 @@
               <img src="assets/images/project1.png" alt="project 1" />
               <div class="project-link">
                 <p>// Autobuska stanica</p>
-                <a href="#"
+                <a href="singleProduct.html"
                   ><img
                     src="assets/images/top-right-arrow.svg"
                     alt="link"
@@ -132,7 +142,7 @@
               <img src="assets/images/project2.png" alt="project 2" />
               <div class="project-link">
                 <p>// autobuska stanica</p>
-                <a href="#"
+                <a href="singleProduct.html"
                   ><img
                     src="assets/images/top-right-arrow.svg"
                     alt="link"
@@ -151,7 +161,7 @@
               <img src="assets/images/project3.png" alt="project 3" />
               <div class="project-link">
                 <p>// autobuska stanica</p>
-                <a href="#"
+                <a href="singleProduct.html"
                   ><img
                     src="assets/images/top-right-arrow.svg"
                     alt="link"
@@ -209,5 +219,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!--My script -->
     <script src="./assets/scripts/script.js"></script>
+    </div>
   </body>
 </html>
